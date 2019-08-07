@@ -9,4 +9,4 @@
 
 **Result**
 
-- [UPDATE DEMO LINK](https://igaryok.github.io/ma-task-uber_eats/)
+- [DEMO LINK](https://igaryok.github.io/ma-task-uber_eats/)
