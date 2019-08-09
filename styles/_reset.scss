@@ -17,10 +17,19 @@ button {
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 form {
   height: 100%;
+  width: 100%;
 }
 
 input {
   border: 0;
+}
+
+input:focus {
+  outline: 0;
 }
