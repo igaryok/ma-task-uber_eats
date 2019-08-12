@@ -83,13 +83,18 @@ input:focus {
 .box-time-place__time {
   height: 40px;
   width: 65px;
-  text-align: center;
+  text-align: left;
+  padding-left: 2px;
+  padding-right: 2px;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   color: #1d1d1d;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
+}
+.box-time-place__time::placeholder {
+  text-align: center;
 }
 .box-time-place__between-inputs {
   margin: 0 9px;
@@ -124,6 +129,7 @@ input:focus {
 .search {
   min-width: 320px;
   padding: 0 50px;
+  margin-bottom: 25px;
 }
 .search__box-input {
   display: flex;
@@ -133,9 +139,18 @@ input:focus {
 .search__box-input form {
   width: 100%;
   height: 100%;
+  position: relative;
 }
-.search__box-input__image {
-  margin-right: 8px;
+.search__box-input form:before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url(../images/shape.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 12px;
+  left: 8px;
 }
 .search__box-input__input {
   font-weight: normal;
@@ -143,7 +158,12 @@ input:focus {
   line-height: 24px;
   color: #626262;
   width: 100%;
-  height: 100%;
+  height: 48px;
+  border-bottom: rgba(117, 117, 117, 0.3) solid 1px;
+  padding-left: 38px;
+}
+.search__box-input__input:focus {
+  border-bottom: red solid 1px;
 }
 .search__bottom-line {
   color: #757575;
@@ -221,13 +241,28 @@ input:focus {
   .search {
     padding: 0 8px;
   }
-  .search__box-input__image {
+  .search__box-input {
+    width: 100%;
+  }
+  .search__box-input form {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .search__box-input form:before {
+    content: "";
     width: 16px;
     height: 16px;
+    background-image: url(../images/shape.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 12px;
+    left: 8px;
   }
   .search__box-input__input {
-    width: 210px;
     font-size: 13px;
+    padding-left: 32px;
   }
 
   .icon-basket {
@@ -246,28 +281,35 @@ input:focus {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     font-size: 11px;
     line-height: 13px;
     color: #626262;
   }
+  .box-time-place form:first-child {
+    width: 65px;
+    margin-right: 16px;
+  }
   .box-time-place__time {
     height: 40px;
-    width: 65px;
-    text-align: center;
+    width: 100%;
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
     color: #1d1d1d;
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    margin-right: 16px;
     margin-top: 8px;
+    text-align: left;
+  }
+  .box-time-place__time::placeholder {
+    text-align: center;
   }
   .box-time-place__between-inputs {
     display: none;
   }
   .box-time-place__place {
-    width: 227px;
+    width: 100%;
     display: flex;
     align-items: center;
     border: 1px solid #e0e0e0;
@@ -314,6 +356,7 @@ input:focus {
 }
 .block-cards__card:hover {
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .block-cards__card__img {
   width: 100%;
@@ -326,6 +369,7 @@ input:focus {
   font-weight: normal;
   font-style: normal;
   margin-bottom: 4px;
+  padding-left: 5px;
 }
 .block-cards__card__category {
   font-size: 14px;
@@ -334,6 +378,7 @@ input:focus {
   font-weight: normal;
   font-style: normal;
   margin-bottom: 4px;
+  padding-left: 5px;
 }
 .block-cards__card__time-info {
   font-size: 13px;
@@ -342,6 +387,7 @@ input:focus {
   font-weight: normal;
   font-style: normal;
   margin-bottom: 4px;
+  padding-left: 5px;
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
@@ -392,6 +438,17 @@ input:focus {
   padding: 0;
   margin-bottom: 30px;
   width: 227px;
+  position: relative;
+}
+.footer__menu__menu-left__box-selection:before {
+  content: "";
+  background-image: url(../images/earth.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 16px;
 }
 .footer__menu__menu-left__box-selection__img {
   margin: 0 20px;
@@ -405,6 +462,11 @@ input:focus {
   line-height: 15px;
   font-style: normal;
   border: 0;
+  padding-left: 48px;
+}
+.footer__menu__menu-left__box-selection__selection:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5);
 }
 .footer__menu__menu-left__hashtag {
   font-size: 16px;
@@ -418,11 +480,19 @@ input:focus {
   font-size: 16px;
   line-height: 19px;
 }
+.footer__menu__menu-left__hashtag:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
 .footer__menu__menu-left__hashtag-conteiner {
   margin-bottom: 20px;
 }
 .footer__menu__menu-left__network-icons__icon {
   margin-right: 15px;
+  width: 18px;
+  height: 18px;
+}
+.footer__menu__menu-left__network-icons__icon:hover img {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 .footer__icons-apps {
   display: flex;
@@ -454,6 +524,9 @@ input:focus {
   background-color: #59bd5a;
   border-radius: 2px;
 }
+.footer__button-to-top:hover {
+  background-color: #59bd0a;
+}
 
 .menu-list {
   list-style: none;
@@ -467,6 +540,9 @@ input:focus {
   font-size: 13px;
   line-height: 15px;
   text-decoration: none;
+}
+.menu-list__item:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
