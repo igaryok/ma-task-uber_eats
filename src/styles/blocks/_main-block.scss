@@ -25,12 +25,12 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
 
-    &__img {
+    &-img {
       width: 100%;
       margin-bottom: 15px;
     }
 
-    &__title {
+    &-title {
 
       font-size: 16px;
       line-height: 24px;
@@ -41,7 +41,7 @@
       padding-left: $l-card-padding;
     }
 
-    &__category {
+    &-category {
       font-size: 14px;
       line-height: 21px;
       color: $text-lighter-main;
@@ -52,7 +52,7 @@
 
     }
 
-    &__time-info {
+    &-time-info {
 
       font-size: 13px;
       line-height: 21px;

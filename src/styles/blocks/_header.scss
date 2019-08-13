@@ -19,7 +19,7 @@
     height: 100%;
     margin-left: 92px;
 
-    &__single-button {
+    &-single-button {
 
       font-weight: 500;
       font-size: 13px;
@@ -44,64 +44,65 @@
     }
 
   }
-}
 
-.box-time-place {
-  height: 40px;
-  display: flex;
-  align-items: center;
-
-  &__time {
+  &__box-time-place {
     height: 40px;
-    width: 65px;
-    text-align: left;
-    padding-left: 2px;
-    padding-right: 2px;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #1d1d1d;
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-
-    &::placeholder {
-      text-align: center;
-    }
-  }
-
-  &__between-inputs {
-    margin: 0 9px;
-    font-weight: 300px;
-    font-size: 16px;
-    line-height: 19px;
-    color: $text-lighter-main;
-  }
-
-  &__place {
-    width: 292px;
     display: flex;
     align-items: center;
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    height: 100%;
-    box-sizing: border-box;
 
-    &__icon-geo {
-      margin: 0 16px;
-    }
-
-    &__input {
-      display: flex;
-      align-items: center;
+    &-time {
+      height: 40px;
+      width: 65px;
+      text-align: left;
+      padding-left: 2px;
+      padding-right: 2px;
       font-weight: normal;
       font-size: 16px;
       line-height: 24px;
       color: #1d1d1d;
-      width: 100%;
-      height: 100%;
+      border: 1px solid #e0e0e0;
+      border-radius: 2px;
 
+      &::placeholder {
+        text-align: center;
+      }
+    }
+
+    &-between-inputs {
+      margin: 0 9px;
+      font-weight: 300px;
+      font-size: 16px;
+      line-height: 19px;
+      color: $text-lighter-main;
+    }
+
+    &-place {
+      width: 292px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #e0e0e0;
+      border-radius: 2px;
+      height: 100%;
+      box-sizing: border-box;
+
+      &-icon-geo {
+        margin: 0 16px;
+      }
+
+      &-input {
+        display: flex;
+        align-items: center;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1d1d1d;
+        width: 100%;
+        height: 100%;
+
+      }
     }
   }
+
 }
 
 .search {
@@ -132,7 +133,7 @@
       left: 8px;
     }
 
-    &__input {
+    &-input {
       font-weight: normal;
       font-size: 16px;
       line-height: 24px;
@@ -147,12 +148,6 @@
       }
 
     }
-  }
-
-  &__bottom-line {
-    color: #757575;
-    opacity: 0.3;
-    margin-bottom: 25px;
   }
 
 }
@@ -173,7 +168,7 @@
     &__buttons-box {
       margin-left: 0;
 
-      &__single-button {
+      &-single-button {
 
         width: 72px;
 
@@ -183,41 +178,43 @@
 
       }
     }
+
+    &__box-time-place {
+
+      &-time {
+        width: 57px;
+        font-size: 13px;
+        line-height: 24px;
+      }
+
+      &-between-inputs {
+        margin: 0 7px;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 15px;
+      }
+
+      &-place {
+        width: 215px;
+
+        &-icon-geo {
+          margin: 0 10px;
+        }
+
+        &-input {
+          font-size: 13px;
+          line-height: 24px;
+
+        }
+      }
+    }
+
   }
 
   .search {
     padding: 0 $rl-padding-small;
   }
 
-  .box-time-place {
-
-    &__time {
-      width: 57px;
-      font-size: 13px;
-      line-height: 24px;
-    }
-
-    &__between-inputs {
-      margin: 0 7px;
-      font-weight: normal;
-      font-size: 13px;
-      line-height: 15px;
-    }
-
-    &__place {
-      width: 215px;
-
-      &__icon-geo {
-        margin: 0 10px;
-      }
-
-      &__input {
-        font-size: 13px;
-        line-height: 24px;
-
-      }
-    }
-  }
 }
 
 @media (max-width: 639px) {
@@ -233,7 +230,7 @@
     &__buttons-box {
       margin-left: 0;
 
-      &__single-button {
+      &-single-button {
         width: 72px;
         font-weight: 500;
         font-size: 11px;
@@ -244,6 +241,14 @@
         }
 
       }
+    }
+
+    &__box-time-place {
+      display: none;
+    }
+
+    &__icon-basket {
+      display: none;
     }
 
   }
@@ -272,16 +277,12 @@
         left: 8px;
       }
 
-      &__input {
+      &-input {
         font-size: 13px;
         padding-left: 32px;
       }
 
     }
-  }
-
-  .icon-basket {
-    display: none;
   }
 
   .mobile-box-place {
@@ -307,7 +308,7 @@
       margin-right: 16px;
     }
 
-    &__time {
+    &-time {
       height: 40px;
       width: 100%;
       font-weight: normal;
@@ -325,11 +326,11 @@
 
     }
 
-    &__between-inputs {
+    &-between-inputs {
       display: none;
     }
 
-    &__place {
+    &-place {
       width: 100%;
       display: flex;
       align-items: center;
@@ -339,11 +340,11 @@
       box-sizing: border-box;
       margin-top: 8px;
 
-      &__icon-geo {
+      &-icon-geo {
         margin: 0 16px;
       }
 
-      &__input {
+      &-input {
         display: flex;
         align-items: center;
         font-weight: normal;
@@ -352,10 +353,6 @@
         color: #1d1d1d;
       }
     }
-  }
-
-  .header .box-time-place {
-    display: none;
   }
 
 }
