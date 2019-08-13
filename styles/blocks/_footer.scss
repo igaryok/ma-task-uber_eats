@@ -23,9 +23,9 @@
 
     margin-bottom: 50px;
 
-    &__menu-left {
+    &-menu-left {
 
-      &__box-selection {
+      &-box-selection {
         display: flex;
         align-items: center;
         border: 1px solid #3b3b3b;
@@ -46,11 +46,11 @@
           left: 16px;
         }
 
-        &__img {
+        &-img {
           margin: 0 20px;
         }
 
-        &__selection {
+        &-selection {
           background-color: #3b3b3b;
           width: 227px;
           height: 40px;
@@ -68,7 +68,7 @@
         }
       }
 
-      &__hashtag {
+      &-hashtag {
         font-size: 16px;
         line-height: 19px;
         color: $text-color-on-dark-back;
@@ -87,13 +87,13 @@
 
       }
 
-      &__hashtag-conteiner {
+      &-hashtag-conteiner {
         margin-bottom: 20px;
       }
 
-      &__network-icons {
+      &-network-icons {
 
-        &__icon {
+        &-icon {
           margin-right: 15px;
           width: 18px;
           height: 18px;
@@ -114,7 +114,7 @@
     justify-content: center;
     padding-bottom: 40px;
 
-    &__icon:first-of-type {
+    &-icon:first-of-type {
       margin-right: 40px;
     }
   }
@@ -150,27 +150,27 @@
 
   }
 
-}
+  &__menu-list {
+    list-style: none;
+    padding: 0;
 
-.menu-list {
-  list-style: none;
-  padding: 0;
-
-  &__li:not(:last-of-type) {
-    margin-bottom: 23px;
-  }
-
-  &__item {
-    color: $text-color-on-dark-back;
-    font-size: 13px;
-    line-height: 15px;
-    text-decoration: none;
-
-    &:hover {
-      box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    &-li:not(:last-of-type) {
+      margin-bottom: 23px;
     }
 
+    &-item {
+      color: $text-color-on-dark-back;
+      font-size: 13px;
+      line-height: 15px;
+      text-decoration: none;
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(255,255,255,0.5);
+      }
+
+    }
   }
+
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
@@ -179,9 +179,9 @@
 
     &__menu {
 
-      &__menu-left {
+      &-menu-left {
 
-        &__box-selection {
+        &-box-selection {
           width: 176px;
         }
       }
@@ -201,13 +201,13 @@
       grid-template-columns: 1fr;
       margin-bottom: 40px;
 
-      &__menu-middle {
+      &-menu-middle {
         margin-bottom: 23px;
       }
 
-      &__menu-left {
+      &-menu-left {
         margin-bottom: 40px;
-        &__box-selection {
+        &-box-selection {
           width: 173px;
         }
       }
